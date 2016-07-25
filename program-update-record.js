@@ -16,7 +16,7 @@ MongoClient.connect("mongodb://localhost:27017/"+dbName, function(err, db) {
       db.close();
       return;
     }
-    //Insert the record here
+    //Update the record here
     collection.update({name: "Tina"},{$set:{age:40}},function(err,data){
        if(err){
           console.log(err);
