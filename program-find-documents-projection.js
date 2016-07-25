@@ -15,7 +15,7 @@ MongoClient.connect("mongodb://localhost:27017/learnyoumongo", function(err, db)
       db.close();
       return;
     }
-    collection.find({ age : { $gt: Number(ageToBeGreaterThan) } })
+    collection.find({ age : { $gt: Number(ageToBeGreaterThan) } },{age:1,name:1,_id:0})
     .toArray(function(err,documents){
       if(err){
         console.log(err);
